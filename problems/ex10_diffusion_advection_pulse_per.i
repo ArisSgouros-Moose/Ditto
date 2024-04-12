@@ -1,8 +1,8 @@
 [Mesh]
   type = GeneratedMesh
   dim = 2
-  nx = 120
-  ny = 20
+  nx = 60
+  ny = 10
   ymin = -5.0
   ymax = 5.0
   xmin = -5.0
@@ -57,6 +57,25 @@
   []
 []
 
+[Postprocessors]
+  [step_size]             # Size of the time step
+    type = TimestepSize
+  []
+  [iterations]            # Number of iterations needed to converge timestep
+    type = NumNonlinearIterations
+  []
+  [nodes]                 # Number of nodes in mesh
+    type = NumNodes
+  []
+  [evaluations]           # Cumulative residual calculations for simulation
+    type = NumResidualEvaluations
+  []
+  [total_uu]
+    type = ElementIntegralVariablePostprocessor
+    variable = uu
+  []
+[]
+
 [Executioner]
   type = Transient
   solve_type = 'PJFNK'
@@ -66,4 +85,5 @@
 
 [Outputs]
   exodus = true
+  csv = true
 []
