@@ -1,2 +1,2 @@
 #!/bin/bash
-rm *out*
+rm *out* temp* *.csv

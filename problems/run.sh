@@ -1,2 +1,3 @@
 #!/bin/bash
-../ditto-opt -i $1
+cp $1 temp.i
+../ditto-opt -i temp.i
