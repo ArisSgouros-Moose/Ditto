@@ -68,10 +68,29 @@
   []
 []
 
+[Postprocessors]
+  [step_size]             # Size of the time step
+    type = TimestepSize
+  []
+  [iterations]            # Number of iterations needed to converge timestep
+    type = NumNonlinearIterations
+  []
+  [nodes]                 # Number of nodes in mesh
+    type = NumNodes
+  []
+  [evaluations]           # Cumulative residual calculations for simulation
+    type = NumResidualEvaluations
+  []
+  [total_uu]
+    type = ElementIntegralVariablePostprocessor
+    variable = uu
+  []
+[]
+
 [Executioner]
   type = Transient
   solve_type = 'PJFNK'
-  num_steps = 10
+  num_steps = 20
   #dt = 1
   [./TimeStepper]
     type = IterationAdaptiveDT
@@ -89,4 +108,5 @@
 
 [Outputs]
   exodus = true
+  csv = true
 []
