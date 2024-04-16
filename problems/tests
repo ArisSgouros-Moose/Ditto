@@ -1,0 +1,77 @@
+[Tests]
+  [ex01_diffusion]
+    type = RunApp
+    input = 'ex01_diffusion.i'
+    check_input = True
+  []
+  [ex02_addiffusion]
+    type = RunApp
+    input = 'ex02_addiffusion.i'
+    check_input = True
+  []
+  [ex03_transient]
+    type = RunApp
+    input = 'ex03_transient.i'
+    check_input = True
+  []
+  [ex04_param_diff]
+    type = RunApp
+    input = 'ex04_param_diff.i'
+    check_input = True
+  []
+  [ex05_material_diff]
+    type = RunApp
+    input = 'ex05_material_diff.i'
+    check_input = True
+  []
+  [ex06_ic_function_neumann]
+    type = RunApp
+    input = 'ex06_ic_function_neumann.i'
+    check_input = True
+  []
+  [ex06_ic_function_per]
+    type = RunApp
+    input = 'ex06_ic_function_per.i'
+    check_input = True
+  []
+  [ex06_ic_pulse]
+    type = RunApp
+    input = 'ex06_ic_pulse.i'
+    check_input = True
+  []
+  [ex07_ic_pulse_dirichlet0]
+    type = RunApp
+    input = 'ex07_ic_pulse_dirichlet0.i'
+    check_input = True
+  []
+  [ex07_ic_pulse_neumann]
+    type = RunApp
+    input = 'ex07_ic_pulse_neumann.i'
+    check_input = True
+  []
+  [ex07_ic_pulse_periodic]
+    type = RunApp
+    input = 'ex07_ic_pulse_periodic.i'
+    check_input = True
+  []
+  [ex08_adaptive_grid]
+    type = RunApp
+    input = 'ex08_adaptive_grid.i'
+    check_input = True
+  []
+  [ex09_adaptive_step]
+    type = RunApp
+    input = 'ex09_adaptive_step.i'
+    check_input = True
+  []
+  [ex10_diffusion_advection_inflow]
+    type = RunApp
+    input = 'ex10_diffusion_advection_inflow.i'
+    check_input = True
+  []
+  [ex10_diffusion_advection_pulse_per]
+    type = RunApp
+    input = 'ex10_diffusion_advection_pulse_per.i'
+    check_input = True
+  []
+[]
